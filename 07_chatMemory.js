@@ -11,7 +11,7 @@ import { ConversationChain } from "langchain/chains";
 
 const memory = new BufferMemory({
   chatHistory: new DynamoDBChatMessageHistory({
-    tableName: "chatbot-memory",
+    tableName: process.env.AWS_DYNAMODB_TABLE_NAME,
     partitionKey: "id",
     sessionId: new Date().toISOString(), // Or some other unique identifier for the conversation
     config: {
