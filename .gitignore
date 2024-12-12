@@ -1,5 +1,2 @@
 node_modules
-faiss.index
-docstore.json
-package-lock.json
 .env
