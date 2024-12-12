@@ -1,19 +1,28 @@
-# LangChain-JS-Crash-course
+# LangChain-AWS
 
-This repository contains a series of example scripts showcasing the usage of Langchain, a JavaScript library for creating conversational AI applications.
+## What
 
-- `00_basics.js`: Introduces the basics of using the OpenAI API without Langchain.
-- `01_first_chain.js`: Demonstrates how to create your first conversation chain in Langchain.
-- `02_simplesequentialchain.js`: Provides a simple example of creating a sequential conversation chain.
-- `03_sequentialchain.js`: Gives a more detailed walkthrough of creating and utilizing a sequential conversation chain in Langchain.
-- `04_parsers.js`: Shows how to use parsers to process input and output in a conversation chain.
-- `05_indexes.js`: Explains how to create and use indexes in Langchain for efficient retrieval of information.
-- `06_usestore.js`: Guides on how to utilize the Vector Databases in Langchain for maintaining and retrieving information which was not trained into the model.
-- `07_chat.js`: Showcases how to create a chat bot in Langchain, forming the basis of a conversational AI application.
-- `08_agents.js`: Illustrates how to create and use agents in Langchain, which are autonomous entities that can interact within a conversation chain.
+This repository contains a series of example scripts showcasing the usage of Langchain with AWS Bedrock
 
-To run these examples, clone the git repository and run `npm install` to install die dependencies.
-You need to create a `.env` file and add your API Key for OpenAI like this: `OPENAI_API_KEY=sk-...`
+- `01_chatModel.js`: How to invoke a bedrock model using Langchain.
+- `02_runnableSequence.js`: How to run the chains sequentially.
+- `03_parsers.js`: How to use parsers to process response in a sepecific format.
+- `04_embeddings.js`: How to load, chunk, and embed a document and store it in a vector store using AWS Bedrock Embeddings and PineCone Vector Store.
+- `05_similaritySearch.js`: How to do vector similarity search using  AWS Bedrock Embeddings and PineCone Vector Store.
+- `06_knowledgeBase.js`: How to connect and get information from AWS Knowledge Base.
+- `07_chatMemory.js`: How to store the chat memory in the AWS DynamoDB.
 
-This codes utilizes ES6 modules, to allow `import` statements and `async/await` within NodeJS.
-# langchain_aws
+## How to run
+- Configure AWS CLI on local machine
+- Set up an Index in PineCone Vector Store
+- Request model access to a anthropic and titan text embedding model in AWS Bedrock
+- Create a AWS Bedrock Knowledge Base and DynamoDB
+- Run `npm run install`
+- Run `node 01_chatModel.js` and similar to other scripts
+
+## Sources
+The code is based on tutorial: https://www.youtube.com/watch?v=mAYS4d0hrek&list=PLNVqeXDm5tIp_WDhE46ApaJRubuDJcxu4&index=3
+Other sources:
+- Integration of Langchain with AWS Bedrock: https://js.langchain.com/v0.2/docs/integrations/platforms/aws
+- Langchain How-to Guides: https://js.langchain.com/docs/how_to/
+  
