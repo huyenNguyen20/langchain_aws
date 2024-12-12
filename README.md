@@ -22,6 +22,8 @@ This repository contains a series of example scripts showcasing the usage of Lan
 
 ## Sources
 The code is based on tutorial: https://www.youtube.com/watch?v=mAYS4d0hrek&list=PLNVqeXDm5tIp_WDhE46ApaJRubuDJcxu4&index=3
+
+
 Other sources:
 - Integration of Langchain with AWS Bedrock: https://js.langchain.com/v0.2/docs/integrations/platforms/aws
 - Langchain How-to Guides: https://js.langchain.com/docs/how_to/
